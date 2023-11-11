@@ -7,7 +7,8 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "jest",
-    "lint": "tsc --noemit && eslint \"{src}/**/*.ts\" --fix",
+    "test:cov": "jest --coverage",
+    "lint": "tsc --noemit && eslint \"{src,__tests__}/**/*.ts\" --fix",
     "prebuild": "rimraf ./dist/*",
     "build": "tsc -p tsconfig.build.json"
   },
