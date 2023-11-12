@@ -2,7 +2,6 @@
   "name": "nestjs-tslog",
   "version": "0.0.1",
   "description": "TSlog integration for Nestjs",
-  "private": true,
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -28,7 +27,7 @@
     "logger",
     "tslog"
   ],
-  "author": "sw1tchdev",
+  "author": "sw1tchdev <switchwebdev@gmail.com> (https://github.com/sw1tchdev)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sw1tchdev/nestjs-tslog/issues"

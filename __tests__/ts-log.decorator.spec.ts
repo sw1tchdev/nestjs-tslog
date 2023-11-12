@@ -1,7 +1,7 @@
 import { Controller } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
-import { InjectTsLogger, TsLogModule } from '../src';
-import { Logger } from 'tslog';
+import { InjectTsLogger, TslogModule } from '../src';
+import type { Logger } from 'tslog';
 
 describe('check decorator', () => {
   describe('InjectTsLogger', () => {
@@ -24,7 +24,7 @@ describe('check decorator', () => {
       }
 
       const moduleRef = await Test.createTestingModule({
-        imports: [TsLogModule.register({})],
+        imports: [TslogModule.forRoot()],
         controllers: [TestOneController, TestTwoController],
       }).compile();
 
