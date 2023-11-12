@@ -10,6 +10,7 @@ export const tsLogProvider: Provider = {
   useFactory: async ({ tslogOptions }: TsLogModuleOptions) => {
     return new Logger(tslogOptions?.settings, tslogOptions?.logObj);
   },
+  scope: Scope.TRANSIENT,
 };
 
 export const additionalOptionsProvider: Provider = {
@@ -18,5 +19,4 @@ export const additionalOptionsProvider: Provider = {
   useFactory: async (tsLogModuleOptions: TsLogModuleOptions) => {
     return { additionalOptions: tsLogModuleOptions.additionalOptions };
   },
-  scope: Scope.TRANSIENT,
 };

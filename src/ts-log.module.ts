@@ -6,6 +6,6 @@ import { TslogLogger } from './ts-log.logger';
 @Global()
 @Module({
   providers: [TslogLogger, additionalOptionsProvider, tsLogProvider],
-  exports: [TslogLogger],
+  exports: [TslogLogger, tsLogProvider],
 })
 export class TsLogModule extends ConfigurableModuleClass {}
