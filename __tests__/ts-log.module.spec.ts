@@ -35,7 +35,7 @@ describe('module initialization', () => {
       const tslogLogger = moduleRef.get<TslogLogger>(TslogLogger);
       moduleRef.useLogger(tslogLogger);
 
-      const app = moduleRef.createNestApplication();
+      const app = moduleRef.createNestApplication({ bufferLogs: true });
       await app.init();
 
       const testController = moduleRef.get<TestController>(TestController);
@@ -66,7 +66,7 @@ describe('module initialization', () => {
       const tslogLogger = moduleRef.get<TslogLogger>(TslogLogger);
       moduleRef.useLogger(tslogLogger);
 
-      const app = moduleRef.createNestApplication();
+      const app = moduleRef.createNestApplication({ bufferLogs: true });
       await app.init();
 
       const testController = moduleRef.get<TestController>(TestController);
@@ -104,7 +104,7 @@ describe('module initialization', () => {
       const tslogLogger = moduleRef.get<TslogLogger>(TslogLogger);
       moduleRef.useLogger(tslogLogger);
 
-      const app = moduleRef.createNestApplication();
+      const app = moduleRef.createNestApplication({ bufferLogs: true });
       await app.init();
 
       const testController = moduleRef.get<TestController>(TestController);
@@ -141,7 +141,7 @@ describe('module initialization', () => {
       const tslogLogger = moduleRef.get<TslogLogger>(TslogLogger);
       moduleRef.useLogger(tslogLogger);
 
-      const app = moduleRef.createNestApplication();
+      const app = moduleRef.createNestApplication({ bufferLogs: true });
       await app.init();
 
       const testController = moduleRef.get<TestController>(TestController);
