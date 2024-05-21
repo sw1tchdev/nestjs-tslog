@@ -64,7 +64,7 @@ constructor(@InjectTsLogger() private readonly logger: Logger) { }
 Or you can replace default Nest Logger:
 
 ```ts
-import { TslogModule } from 'nestjs-tslog';
+import { TslogLogger } from 'nestjs-tslog';
 // ...
 const app = await NestFactory.create(AppModule, { bufferLogs: true });
 app.useLogger(app.get(TslogLogger));
